@@ -113,9 +113,19 @@ function crearMensajeFinal(resultadoFinal) {
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
+}
+function reiniciarJuego() { 
+    location.reload() 
 }
 
 function aleatorio(min, max) { 
-    return Math.floor(Math.random() * (max - min + 1) + min) }
+    return Math.floor(Math.random() * (max - min + 1) + min) 
+}
 
 window.addEventListener('load', iniciarJuego)
